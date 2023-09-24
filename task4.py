@@ -46,7 +46,7 @@ def analysis(num_list, number):
         else:
             number[n] = 1
 
-    for n in number:
+    for n in number: # далее условие if n > 1
         print('Число', n, 'повторяется:',number[n])
 
 analysis(num_list, number)
