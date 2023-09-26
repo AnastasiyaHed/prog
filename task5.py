@@ -39,3 +39,33 @@
 # my_func()
 # my_func2()
 
+#Сделать функцию, которая на вход принимает строку. Анализирует ее исключительно методом .isdigit(), без
+#доп библиотек и переводит строку в число. Функция умеет распозновать отрицательные числа и десятичные дроби
+
+def convert_string_to_number(string):
+    # Проверяем, является ли строка числом
+    if string.isdigit():
+        return 'Вы ввели положительное целое число:', int(string)
+
+    # Проверяем, является ли строка отрицательным числом
+    if string.startswith('-') and string[1:].isdigit():
+        return 'Вы ввели отрицательное целое число:', int(string)
+
+    # Проверяем, является ли строка десятичной дробью
+    if '.' in string:
+        parts = string.split('.')
+        # Проверяем, что оба разделителя являются числами
+        if len(parts) == 2 and parts[0].isdigit() and parts[1].isdigit():
+            return 'Вы ввели положительное дробное число:', float(string)
+
+        else:
+            len(parts) == 3 and parts[1].isdigit() and parts[2].isdigit() and string.startswith('-')
+            return 'Вы ввели отрицательное дробное число:', float(string)
+
+    # Если строка не соответствует ни одному из вышеуказанных случаев, возвращаем None
+    return 'Вы ввели некорректное число:', text
+
+
+text = input('Введите число: ')
+
+print(convert_string_to_number(text))
