@@ -5,7 +5,7 @@ import re
 import random
 from datetime import datetime
 
-token = '5478262245:AAEqKm7aBACm4VXSh1HkSI_hoTx6dumVJLw'
+token = 'token'
 bot = telebot.TeleBot(token)
 
 class User:
