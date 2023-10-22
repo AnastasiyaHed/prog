@@ -5,7 +5,7 @@ import re
 import random
 from datetime import datetime
 
-token = '5478262245:AAEqKm7aBACm4VXSh1HkSI_hoTx6dumVJLw'
+token = "token"####
 bot = telebot.TeleBot(token)
 
 class User:
@@ -115,7 +115,7 @@ def process_order(message):
 
             # Отправка сообщения администратору с данными пользователя
 
-            admin_chat_id = '676134939'
+            admin_chat_id = ''
             admin_message = f'Новый заказ\nИмя: {current_user.name}\nНомер телефона: {current_user.phone}\nВремя: {current_user.time}\nНомер заказа: {current_user.order_number}'
             bot.send_message(admin_chat_id, admin_message)
         else:
@@ -133,7 +133,7 @@ def cancel_order(message):
 
 bot.infinity_polling()
 
-# не отправляет сообщение администратору
+# не отправляет сообщение администратору/
 
 
 
